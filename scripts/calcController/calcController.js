@@ -1,5 +1,5 @@
 class CalcController{
-    constructor(){
+    constructor(){ 
         this._display = document.querySelector('#display')
         this._data = document.querySelector('#data')
         this._hora = document.querySelector('#hora')
