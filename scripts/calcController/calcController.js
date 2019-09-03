@@ -47,7 +47,16 @@ class CalcController{
     }
 
     eOperador(valor){
-       return ['+','-','*','/','%',].indexOf(valor)!=-1
+       return ['+','-','*','/','%','='].indexOf(valor)!=-1
+    }
+
+    operadorIgual(valor){
+
+        if(valor == '='){
+
+            validaOperacao(valor)
+
+        }
     }
 
     ultimaOperacao(){
@@ -60,11 +69,16 @@ class CalcController{
     }
 
    validaOperacao(valor){
-    this._operacao.push(valor)
-       if(this._operacao.length > 3){
+    
+       if(valor == '='){
            
-           this.calc()
+        let resultado = eval(this._operacao.join(''))
+        this._operacao = [resultado]
+        this.mostrarDisplay()
         
+       }else if(this._operacao.length > 3){
+        this._operacao.push(valor)
+        this.calc()
        }
    }
 
