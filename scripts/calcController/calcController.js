@@ -47,7 +47,7 @@ class CalcController{
     }
 
     eOperador(valor){
-       return ['+','-','*','/','%'].indexOf(valor)!=-1
+       return ['+','-','*','/','%',].indexOf(valor)!=-1
     }
 
     ultimaOperacao(){
@@ -73,6 +73,7 @@ class CalcController{
     let result = eval(this._operacao.join(''))
     this._operacao = [result, ultimoitem]
     this.mostrarDisplay()
+    console.log(this._operacao)
     
    }
 
@@ -98,6 +99,7 @@ class CalcController{
             }else{
                 this.validaOperacao(valor)
                 this.mostrarDisplay()
+                console.log(this._operacao)
             }
         }else{
 
@@ -109,6 +111,7 @@ class CalcController{
             let novovalor = this.ultimaOperacao().toString() + valor.toString()
             this.trocavalor(parseInt(novovalor))
                 this.mostrarDisplay()
+                console.log(this._operacao)
             }
             
             
