@@ -87,7 +87,7 @@ class CalcController{
        this.displaycalc = ultimonumero
    }
 
-    addoperacao(valor){
+    addOperacao(valor){
         if(isNaN(this.ultimaOperacao())){
             //string
             if(this.eOperador(valor)){
@@ -143,27 +143,27 @@ class CalcController{
             break
 
             case 'soma':
-                this.addoperacao('+')
+                this.addOperacao('+')
             break
 
             case 'subtracao':
-                this.addoperacao('-')
+                this.addOperacao('-')
             break
 
             case 'multiplicacao':
-                this.addoperacao('*')
+                this.addOperacao('*')
             break
 
             case 'divisao':
-                this.addoperacao('/')
+                this.addOperacao('/')
             break
 
             case 'porcento':
-                this.addoperacao('%')
+                this.addOperacao('%')
             break
 
             case 'igual':
-                this.addoperacao('=')
+                this.addOperacao('=')
             break
 
             case '0':
@@ -176,7 +176,7 @@ class CalcController{
             case '7':
             case '8':
             case '9':
-                this.addoperacao(parseInt(valor))
+                this.addOperacao(parseInt(valor))
             break
 
             default:
